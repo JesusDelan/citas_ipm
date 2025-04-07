@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solicitud de Cita</h1>
+    <form action="procesar.php" method="POST">
+        <label for="folio_visita">Folio de Visita (Cita):</label>
+        <input type="text" id="folio_visita" name="folio_visita" required>
+
+        <label for="fecha_cita">Fecha Deseada de la Cita:</label>
+        <input type="date" id="fecha_cita" name="fecha_cita" required>
+
+        <label for="agencia">Agencia:</label>
+        <input type="text" id="agencia" name="agencia" required>
+
+        <label for="cliente_facturar">Cliente a Facturar:</label>
+        <input type="text" id="cliente_facturar" name="cliente_facturar" required>
+
+        <label for="telefono">Teléfono de Contacto:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+</body>
+</html>
